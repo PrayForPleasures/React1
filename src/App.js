@@ -1,9 +1,9 @@
-import { Form } from "./components/Form";
+import { Message } from "./components/Message";
 
-export const App = () => {
+const App = () => {
   return (
     <div className="App">
-      <Form />
+      <Message name="Dmitriy" age="32" />
     </div>
   );
 };
