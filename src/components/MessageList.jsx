@@ -8,16 +8,19 @@ export const MessageList = () => {
       author: "Dmitriy",
       message: "'Hi'",
       date: new Date().getFullYear(),
+      idx: "3",
     },
     {
       author: "Victor",
       message: "'Hello'",
       date: new Date().getFullYear(),
+      idx: "3",
     },
     {
       author: "Zhenya",
       message: "'Hi, everybody'",
       date: new Date().getFullYear(),
+      idx: "3",
     },
   ]);
 
@@ -25,7 +28,7 @@ export const MessageList = () => {
     <div className="messageList">
       <div> Message List:</div>
       {messageBody.map((el, idx) => (
-        <span className="spanStyle">
+        <span key={idx} className="spanStyle">
           {el.author} said: {el.message} at {el.date}
           <br></br>
         </span>
