@@ -12,9 +12,26 @@ export const Form = () => {
     console.log("submit form", name, surname, email);
   };
 
+  const myHook = useEffect(() => {
+    const robotSaid = document.querySelector(".outputFromUser");
+    const nameId = document.getElementById("name");
+    const surnameId = document.getElementById("surname");
+    const emailId = document.getElementById("email");
+
+    if (
+      nameId.value.length > 0 &&
+      surnameId.value.length > 0 &&
+      emailId.value.length > 0
+    ) {
+      setTimeout(() => {
+        robotSaid.textContent = `Robot said: ' Hi, ${nameId.value} ${surnameId.value}, your email: ${emailId.value}! '`;
+      }, 2500);
+    }
+  });
+
   return (
-    <div>
-      <form className="formStyle" onSubmit={submitForm}>
+    <div className="divForForm">
+      <form className="formStyle">
         <input
           className="inputTxt"
           id="name"
@@ -39,10 +56,11 @@ export const Form = () => {
           placeholder="Example@example.com"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="inputSubmit" type="submit">
+        <button className="inputSubmit" type="submit" onClick={submitForm}>
           Submit
         </button>
       </form>
+      <div className="outputFromUser">Robot has nothing to say =/</div>
     </div>
   );
 };

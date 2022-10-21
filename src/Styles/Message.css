@@ -40,6 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1%;
 }
 
 .inputTxt {
@@ -48,7 +49,21 @@
 }
 
 .inputSubmit {
-  margin: 0 1% 1% 0;
+  margin-bottom: 1%;
   background-color: lightgreen;
   border-radius: 3px;
+}
+
+.outputFromUser {
+  width: 560px;
+  height: 300px;
+  border: 2px solid #222;
+  border-radius: 3px;
+  padding: 1%;
+}
+
+.divForForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
