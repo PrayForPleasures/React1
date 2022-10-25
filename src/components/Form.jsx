@@ -31,7 +31,7 @@ export const Form = () => {
 
   return (
     <div className="divForForm">
-      <form className="formStyle">
+      <form className="formStyle" onChange={myHook}>
         <input
           className="inputTxt"
           id="name"
