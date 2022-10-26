@@ -56,7 +56,12 @@ export const Form = () => {
           placeholder="Example@example.com"
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button className="inputSubmit" type="submit" onClick={submitForm}>
+        <button
+          variant="outlined"
+          className="inputSubmit"
+          type="submit"
+          onClick={submitForm}
+        >
           Submit
         </button>
       </form>
