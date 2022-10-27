@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -27,6 +33,7 @@
   max-width: 320px;
   border: 2px solid #222;
   font-weight: bold;
+  margin-top: 1%;
   margin-bottom: 1%;
   padding: 4px;
   border-radius: 3px;
@@ -46,6 +53,7 @@
 .inputTxt {
   margin: 0 1% 1% 0;
   border-radius: 3px;
+  min-width: 150px;
 }
 
 .inputSubmit {
@@ -55,7 +63,7 @@
 }
 
 .outputFromUser {
-  width: 560px;
+  width: 650px;
   height: 300px;
   border: 2px solid #222;
   border-radius: 3px;

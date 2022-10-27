@@ -1,20 +1,18 @@
 import { Form } from "./components/Form";
 import { Message } from "./components/Message";
 import { MessageList } from "./components/MessageList";
-import { useState } from "react";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { green, purple } from "@mui/material/colors";
+import CssBaseline from "@mui/material/CssBaseline";
 
-const theme = createTheme({
+const darkTheme = createTheme({
   palette: {
-    secondary: {
-      main: purple[500],
-    },
+    mode: "dark",
   },
 });
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <div className="App">
         <Message name="Dmitriy" age="32" />
         <MessageList />
