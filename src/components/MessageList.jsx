@@ -1,25 +1,23 @@
 import React from "react";
-import { useState, useCallback, useEffect } from "react";
-import { Typography } from "@material-ui/core";
+import { useState, useEffect } from "react";
 
 export const MessageList = () => {
-  const [messageList, setMessageList] = useState([]);
   const [messageBody, setMessageBody] = useState([
     {
       author: "Dmitriy",
       message: "'Hi'",
       date: new Date().getFullYear(),
-      idx: "3",
+      idx: "1",
     },
     {
       author: "Victor",
       message: "'Hello'",
       date: new Date().getFullYear(),
-      idx: "3",
+      idx: "2",
     },
     {
       author: "Zhenya",
-      message: "'Hi, everybody'",
+      message: "'Hey, you'",
       date: new Date().getFullYear(),
       idx: "3",
     },
@@ -27,7 +25,7 @@ export const MessageList = () => {
 
   return (
     <div className="messageList">
-      <Typography> Message List:</Typography>
+      <div> Message List:</div>
       {messageBody.map((el, idx) => (
         <span key={idx} className="spanStyle">
           {el.author} said: {el.message} at {el.date}

@@ -3,6 +3,7 @@ import { Message } from "./components/Message";
 import { MessageList } from "./components/MessageList";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Chat } from "./components/Chat";
 
 const darkTheme = createTheme({
   palette: {
@@ -15,7 +16,10 @@ const App = () => {
       <CssBaseline />
       <div className="App">
         <Message name="Dmitriy" age="32" />
-        <MessageList />
+        <div className="chat_messages">
+          <Chat />
+          <MessageList />
+        </div>
         <Form />
       </div>
     </ThemeProvider>

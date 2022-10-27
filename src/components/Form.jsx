@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../Styles/Message.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Typography } from "@material-ui/core";
 
 export const Form = () => {
   const [name, setName] = useState("");
@@ -22,43 +23,51 @@ export const Form = () => {
     }
   });
 
+  const refName = useRef(null);
+  useEffect(() => {
+    refName.current.focus();
+  });
+
   return (
-    <div className="divForForm">
-      <form className="formStyle" onChange={myHook}>
-        <input
-          className="inputTxt"
-          id="name"
-          value={name}
-          type="text"
-          placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          className="inputTxt"
-          id="surname"
-          value={surname}
-          type="text"
-          placeholder="Surname"
-          onChange={(e) => setSurname(e.target.value)}
-        />
-        <input
-          className="inputTxt"
-          id="email"
-          value={email}
-          type="email"
-          placeholder="Example@example.com"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button
-          variant="outlined"
-          className="inputSubmit"
-          type="submit"
-          onClick={submitForm}
-        >
-          Submit
-        </button>
-      </form>
-      <div className="outputFromUser">Robot has nothing to say =/</div>
-    </div>
+    <Typography>
+      <div className="divForForm">
+        <form className="formStyle" onChange={myHook}>
+          <input
+            className="inputTxt"
+            ref={refName}
+            id="name"
+            value={name}
+            type="text"
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            className="inputTxt"
+            id="surname"
+            value={surname}
+            type="text"
+            placeholder="Surname"
+            onChange={(e) => setSurname(e.target.value)}
+          />
+          <input
+            className="inputTxt"
+            id="email"
+            value={email}
+            type="email"
+            placeholder="Example@example.com"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button
+            variant="outlined"
+            className="inputSubmit"
+            type="submit"
+            onClick={submitForm}
+          >
+            Submit
+          </button>
+        </form>
+        <div className="outputFromUser">Robot has nothing to say =/</div>
+      </div>
+    </Typography>
   );
 };
