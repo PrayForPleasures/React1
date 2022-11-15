@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../Styles/Message.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 
