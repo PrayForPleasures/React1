@@ -10,7 +10,7 @@ export const Chat = () => {
     { name: "Zarina", txt: "second message", id: 502 },
     { name: "Nadezhda", txt: "third message", id: 503 },
     { name: "Scooby", txt: "fourth message", id: 504 },
-    { name: "Polina", txt: "fifth message", id: 505 },
+    { name: "Rozalia", txt: "fifth message", id: 505 },
   ]);
 
   return (
