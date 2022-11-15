@@ -26,7 +26,7 @@ export const Form = () => {
   const refName = useRef(null);
   useEffect(() => {
     refName.current.focus();
-  });
+  }, []);
 
   return (
     <Typography>

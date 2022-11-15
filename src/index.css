@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 9px;
+  margin-right: 8px;
+}
+
+.ul_Main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile {
+  margin: 8px;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
